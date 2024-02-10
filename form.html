@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Contact with me</h1>
+    <form action="https://hooks.airtable.com/workflows/v1/genericWebhook/appnjIUFUr7FN9YGq/wflUgNvOj07VoC8Pi/wtrZNS7Vw9j85poIT" method="POST">
+      <label for="usr_name"><b>Name : </b></label>
+      <input type="text" name="usr_name" placeholder="Enter your name" />
+      <br /><br />
+      <label for="usr_email"><b>Email : </b></label>
+      <input type="email" name="usr_email" placeholder="Enter your email" />
+      <br /><br />
+      <label for="usr_msg"><b>Message :</b> </label>
+      <br />
+      <br />
+      <textarea name="usr_msg" cols="30" rows="10"></textarea>
+      <br /><br />
+      <label for="hobbies"><b>Hobbies:</b> </label><br />
+      Codding : <input type="checkbox" name="hobbies" value="codding" /><br />
+      Watching Movies :
+      <input type="checkbox" name="hobbies" value="movies" /><br />
+      Music : <input type="checkbox" name="hobbies" value="music" /><br />
+      Football :
+      <input type="checkbox" name="hobbies" value="football" /><br /><br />
+
+      <b>Education:</b> <select name="educ">
+        <option value="ug">Undergraduate</option>
+        <option value="pg">Postgraduate</option>
+        <option value="deploma">Deploma</option>
+      </select>
+      <br><br>
+      <b>Upload your image : </b><input type="file" name="image" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
