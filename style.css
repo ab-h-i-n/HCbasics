@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     
 }
 
 body{
    background-color: rgb(37, 35, 42);
-   color: white; 
+   color: white;
 }
 main{
     padding: 6rem 4rem;
@@ -88,7 +89,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
+    background-color: #0000003a;
     padding: 1rem 4rem;
 }
 nav h1{
