@@ -91,6 +91,7 @@ nav{
     align-items: center;
     background-color: #0000003a;
     padding: 1rem 4rem;
+    backdrop-filter: blur(10px);
 }
 nav h1{
     text-shadow: 2px 2px 1px red,4px 4px 1px orange,6px 6px 10px #ffff0092;
