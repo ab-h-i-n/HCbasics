@@ -179,6 +179,8 @@ nav ul a:hover{
 .about table{
     width: 90vh;
     color: black;
+    border-radius: 20px;
+    box-shadow: 8px 8px 1px red, 16px 16px 1px orange;
 }
 
 .about table tr{
@@ -186,6 +188,13 @@ nav ul a:hover{
     background-color: #e8e8e8bb;
     box-shadow: 5px 5px 10px #00000080;
     border-radius: 20px;
+    cursor: pointer;
+}
+.about table tr:hover th{
+    background-color: red;
+}
+.about table tr:hover td{
+    background-color: orange;
 }
 .about table td{
     padding: 2rem 4rem;
