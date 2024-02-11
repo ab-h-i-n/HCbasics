@@ -167,18 +167,6 @@ nav ul a:hover{
     transition: all .2s linear;
 }
 
-.bg-img{
-    background-image: url("https://cdn.atulhost.com/wp-content/uploads/2019/06/anime-wallpaper-hd-12.jpg");
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    z-index: -1;
-    position: absolute;
-    filter: blur(5px);
-    opacity: 0.2;
-
-}
-
 .about main{
     display: grid;
     place-content: center;

@@ -3,38 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Form</title>
   </head>
-  <body>
-    <h1>Contact with me</h1>
-    <form action="https://hooks.airtable.com/workflows/v1/genericWebhook/app1EVUTDi5DLYie8/wflUNJpbThvAhxYoN/wtryUCvJEqrwSw8d7" method="POST">
-      <label for="usr_name"><b>Name : </b></label>
-      <input type="text" name="usr_name" placeholder="Enter your name" />
-      <br /><br />
-      <label for="usr_email"><b>Email : </b></label>
-      <input type="email" name="usr_email" placeholder="Enter your email" />
-      <br /><br />
+  <body class="flex justify-center py-14 bg-slate-900">
+    <form
+      action="https://hooks.airtable.com/workflows/v1/genericWebhook/app1EVUTDi5DLYie8/wflUNJpbThvAhxYoN/wtryUCvJEqrwSw8d7"
+      method="POST"
+      class="p-14 bg-slate-100 rounded-lg w-2/3 flex flex-col gap-y-5"
+    >
+      <h1 class="font-black text-center text-4xl mb-8">Contact with me</h1>
+      <div class="flex justify-between">
+        <div>
+          <label for="usr_name"><b>Name : </b></label>
+          <input
+            type="text"
+            name="usr_name"
+            placeholder="Enter your name"
+            class="p-3 rounded-lg bg-slate-400 placeholder-slate-200 "
+          />
+        </div>
+        <div>
+          <label for="usr_name"><b>Phone : </b></label>
+          <input
+            type="number"
+            name="usr_phn"
+            placeholder="Enter your phone"
+            class="p-3 rounded-lg bg-slate-400 placeholder-slate-200 "
+          />
+        </div>
+        <div>
+          <label for="usr_email"><b>Email : </b></label>
+          <input
+            type="email"
+            name="usr_email"
+            placeholder="Enter your email"
+            class="p-3 rounded-lg bg-slate-400 placeholder-slate-200"
+          />
+        </div>
+      </div>
       <label for="usr_msg"><b>Message :</b> </label>
-      <br />
-      <br />
-      <textarea name="usr_msg" cols="30" rows="10"></textarea>
-      <br /><br />
-      <label for="hobbies"><b>Hobbies:</b> </label><br />
-      Codding : <input type="checkbox" name="hobbies" value="codding" /><br />
-      Watching Movies :
-      <input type="checkbox" name="hobbies" value="movies" /><br />
-      Music : <input type="checkbox" name="hobbies" value="music" /><br />
-      Football :
-      <input type="checkbox" name="hobbies" value="football" /><br /><br />
-
-      <b>Education:</b> <select name="educ">
+      <textarea
+        name="usr_msg"
+        cols="30"
+        rows="10"
+        class="p-3 rounded-lg bg-slate-400 placeholder-slate-200"
+      ></textarea>
+      <div class="flex flex-col">
+        <label for="hobbies"><b>Hobbies:</b> </label>
+        <div class="flex gap-x-3 items-center">
+          <input
+            type="checkbox"
+            name="hobbies"
+            value="codding"
+            class="w-4 h-4 accent-green-500"
+          />
+          <label>Codding</label>
+        </div>
+        <div class="flex gap-x-3 items-center">
+          <input
+            type="checkbox"
+            name="hobbies"
+            value="movies"
+            class="w-4 h-4 accent-green-500"
+          />
+          <label>Watching Movies</label>
+        </div>
+        <div class="flex gap-x-3 items-center">
+          <input
+            type="checkbox"
+            name="hobbies"
+            value="music"
+            class="w-4 h-4 accent-green-500"
+          />
+          <label>Music</label>
+        </div>
+        <div class="flex gap-x-3 items-center">
+          <input
+            type="checkbox"
+            name="hobbies"
+            value="football"
+            class="w-4 h-4 accent-green-500"
+          />
+          <label>Football</label>
+        </div>
+      </div>
+      <b>Education:</b>
+      <select name="educ" class="bg-slate-400 rounded-lg p-2 text-white">
         <option value="ug">Undergraduate</option>
         <option value="pg">Postgraduate</option>
         <option value="deploma">Deploma</option>
       </select>
-      <br><br>
-      <b>Upload your image : </b><input type="file" name="image" /><br /><br />
-      <input type="submit" value="Submit" />
+      <b>Upload your image : </b>
+      <input
+        type="file"
+        name="image"
+        class="block bg-slate-400 p-2 rounded-lg"
+      />
+      <div class="flex justify-center">
+        <input
+          type="submit"
+          value="Submit"
+          class="px-3 py-2 bg-blue-400 text-white font-bold rounded-lg text-sm hover:bg-blue-500 cursor-pointer"
+        />
+      </div>
     </form>
   </body>
 </html>
