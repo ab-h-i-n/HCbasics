@@ -140,21 +140,10 @@ nav ul a:hover{
     box-shadow: 3px 3px 5px #00000078;
     cursor: pointer;
     transition: all 0.2s linear;
-    animation: reveal 1s linear forwards;
-    opacity: 0; 
-    filter: saturate(0) blur(5px);
-    animation-timeline: view();
-    animation-range-end: 300px;
-    scale: 0.8;
+
 }
 
-@keyframes reveal {
-    to {
-        scale: 1;
-        opacity: 1;
-        filter: saturate(100%) blur(0px);
-    }
-}
+
 
 .gallery:has(.img-container:hover) .img-container:not(:hover){
     filter: grayscale(100%) brightness(50%);
