@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    
+    scroll-padding: 5.2rem;
 }
 
 body{
@@ -122,15 +122,15 @@ nav ul a:hover{
 }
 .gallery{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
     column-gap: 20px;
     row-gap: 30px;
     padding: 4rem;
     background-color: #00000066;
     border-radius: 25px;
+    grid-template-columns: repeat(2,1fr);
     
 }
-.gallery .img-container{
+.gallery .img-container {
     position: relative;
     place-self: center;
     width: 300px;
@@ -139,8 +139,23 @@ nav ul a:hover{
     border-radius: 20px;
     box-shadow: 3px 3px 5px #00000078;
     cursor: pointer;
-    transition:all .2s linear;
+    transition: all 0.2s linear;
+    animation: reveal 1s linear forwards;
+    opacity: 0; 
+    filter: saturate(0) blur(5px);
+    animation-timeline: view();
+    animation-range-end: 300px;
+    scale: 0.8;
 }
+
+@keyframes reveal {
+    to {
+        scale: 1;
+        opacity: 1;
+        filter: saturate(100%) blur(0px);
+    }
+}
+
 .gallery:has(.img-container:hover) .img-container:not(:hover){
     filter: grayscale(100%) brightness(50%);
 }
@@ -220,3 +235,17 @@ nav ul a:hover{
 .about table tr:last-child td{
     border-radius: 0px 0px 20px 0px;
 }
+@media screen and (min-width: 1108px) {
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+
+
+  @media screen and (min-width:   2364px) {
+    .gallery {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
